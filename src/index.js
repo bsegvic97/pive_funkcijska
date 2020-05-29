@@ -11,7 +11,7 @@ document.getElementById("app").innerHTML = `
 let a = "bottles of bear on the wall\n";
 let b = "bottles of beer\n";
 let c = "Take one down, pass it around\n";
-const concat = (a, b, c, d) => a.concat(b).concat(c);
+const concat = (a, b, c, d) => a.concat(b).concat(c).concat(d);
 let s = "";
 for (var i = 99; i > 0; i--) {
   s = concat(s, i.toString() + " " + a, i.toString() + " " + b, c);
