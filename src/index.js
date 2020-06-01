@@ -8,12 +8,7 @@ document.getElementById("app").innerHTML = `
   <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
 </div>
 `;
-let a = "bottles of bear on the wall\n";
-let b = "bottles of beer\n";
-let c = "Take one down, pass it around\n";
-const concat = (a, b, c, d) => a.concat(b).concat(c).concat(d);
-let s = "";
-for (var i = 99; i > 0; i--) {
-  s = concat(s, i.toString() + " " + a, i.toString() + " " + b, c);
-}
-console.log(s);
+let brojevi=Array.from({length: 99}, (x,i) => i + 1).reverse();
+//dobivanje brojeva od 99 do 1 funkcionalnom paradigmom
+console.log(brojevi.map(broj=>"".concat(broj.toString()," bottles of bear on the wall\n", broj.toString()," bottles of beer\nTake one down, pass it around\n")).join(""))
+//map za prolaz po svim brojevima concat za dodavanje stringova i join da polje pretvorimo u string
